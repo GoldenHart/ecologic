@@ -67,6 +67,5 @@ public class Movement : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestWater.transform.position;
     }
-
 }
 
