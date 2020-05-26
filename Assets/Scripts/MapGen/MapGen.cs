@@ -1,14 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MapGen : MonoBehaviour
 {
+    public int xNum;
+    public int zNum;
     public GameObject[] objects;
-    // Start is called before the first frame update
     void Start()
-    {
-        int rand = Random.Range(0, objects.Length);
-        Instantiate(objects[rand], transform.position, Quaternion.identity);
+    {        
+        for (int x = 0; x < xNum; x += 10)
+        {
+            for (int z = 0; z < zNum; z += 10)
+            {
+                int rand = Random.Range(0, objects.Length);
+                Instantiate(objects[rand], new Vector3(x,0,z), Quaternion.identity);
+            }
+        }
+        
+        Destroy(gameObject);
     }
 }
