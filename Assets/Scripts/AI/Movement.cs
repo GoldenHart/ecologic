@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 /// <summary>
 /// BASE CODE FOR MOVEMENT
@@ -24,17 +23,14 @@ public class Movement : MonoBehaviour
     {
         if (isHungry)
         {
-            print("I need sustenance and I am going to find it.");
             FindClosestFood();
         }
         else if (isThirsty)
         {
-            print("I need liquid sustenance now.");
             FindClosestWater();
         }
         else if (canIdle)
         {
-            print("All my sustenance has been procured. I'm going home now!");
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
         }
@@ -57,9 +53,8 @@ public class Movement : MonoBehaviour
         // Find Food
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestFood.transform.position;
-        if (closestFood.transform.position == null)
+        if (agent.destination == null)
         {
-            print("There is no sustenance. I am dead.");
             Destroy(gameObject);
         }
     }
