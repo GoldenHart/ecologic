@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5579766871970581086}
   - component: {fileID: 3216841338237652792}
   m_Layer: 0
-  m_Name: Unit Head
+  m_Name: Carnivore Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,12 +105,12 @@ GameObject:
   - component: {fileID: 5221719379103285900}
   - component: {fileID: 373252230253442595}
   - component: {fileID: 8166459772589098657}
-  - component: {fileID: 5484537845803210834}
   - component: {fileID: 7915287644568401102}
   - component: {fileID: 9093790990391017380}
+  - component: {fileID: -5633488364189355988}
   m_Layer: 0
-  m_Name: Unit
-  m_TagString: Species
+  m_Name: Carnivore
+  m_TagString: Carnivore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ecdca3c818d59042af008a04e48386d, type: 2}
+  - {fileID: 2100000, guid: f73b0fb499e17b64bb21f9af05acd9f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -190,18 +190,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5484537845803210834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4593900346492340049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085359588bd6cc94285b9ffae8c87ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &7915287644568401102
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -240,3 +228,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-5633488364189355988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593900346492340049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d310a3978e5b74eb954a41dff3601a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

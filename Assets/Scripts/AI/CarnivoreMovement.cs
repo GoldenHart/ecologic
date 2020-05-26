@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Movement : MonoBehaviour
+public class CarnivoreMovement : MonoBehaviour
 {
     bool isHungry = true;
     bool isThirsty = false;
@@ -30,22 +30,22 @@ public class Movement : MonoBehaviour
     }
     void FindClosestFood()
     {
-        float distanceToClosestFood = Mathf.Infinity;
-        Food closestFood = null;
-        Food[] allFood = GameObject.FindObjectsOfType<Food>();
+        float distanceToClosestMovement = Mathf.Infinity;
+        Movement closestMovement = null;
+        Movement[] allMovement = GameObject.FindObjectsOfType<Movement>();
 
-        foreach (Food currentFood in allFood)
+        foreach (Movement currentMovement in allMovement)
         {
-            float distanceToFood = (currentFood.transform.position - this.transform.position).sqrMagnitude;
-            if (distanceToFood < distanceToClosestFood)
+            float distanceToMovement = (currentMovement.transform.position - this.transform.position).sqrMagnitude;
+            if (distanceToMovement < distanceToClosestMovement)
             {
-                distanceToClosestFood = distanceToFood;
-                closestFood = currentFood;
+                distanceToClosestMovement = distanceToMovement;
+                closestMovement = currentMovement;
             }
         }
-        // Find Food
+        // Find Movement
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = closestFood.transform.position;
+        agent.destination = closestMovement.transform.position;
     }
     void FindClosestWater()
     {
@@ -69,14 +69,10 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(("Food")) && isHungry)
+        if (collision.gameObject.CompareTag(("Species")) && isHungry)
         {
             isHungry = false;
             isThirsty = true;
-        }
-        if (collision.gameObject.CompareTag(("Carnivore")))
-        {
-            Destroy(gameObject);
         }
     }
 

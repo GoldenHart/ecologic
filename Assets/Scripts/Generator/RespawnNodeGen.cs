@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
 
-public class NodeGen : MonoBehaviour
+public class RespawnNodeGen : MonoBehaviour
 {
     public GameObject[] objects;
     private float xMin, xMax, zMin, zMax;
-
-    private void Start()
-    {
-        Plant();
-    }
 
     public void Plant()
     {

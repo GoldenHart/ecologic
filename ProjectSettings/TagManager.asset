@@ -9,6 +9,7 @@ TagManager:
   - Species
   - Food
   - Water
+  - Carnivore
   layers:
   - Default
   - TransparentFX

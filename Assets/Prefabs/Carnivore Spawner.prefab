@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3123172032134404838}
   - component: {fileID: 3123172032134404837}
   - component: {fileID: 3123172032134404836}
-  - component: {fileID: 3123172032134404835}
-  - component: {fileID: 6278359374089611348}
+  - component: {fileID: 5068603209156907434}
+  - component: {fileID: -1789953346914407933}
   m_Layer: 0
-  m_Name: Grasslands
+  m_Name: Carnivore Spawner
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3123172032134404835
+--- !u!114 &5068603209156907434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,12 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3123172032134404834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d33c967cbc97c48a1f7df3565dca45, type: 3}
+  m_Script: {fileID: 11500000, guid: e36e5b8f418626d49b0d799a1a09b494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 4882825350490618281, guid: 40e29a8ce88b8f247beca8e928d248e6, type: 3}
-  - {fileID: 9195513848734833549, guid: 566620a0c989b9a40a98fd91bca18edb, type: 3}
+  - {fileID: 4593900346492340049, guid: 7e6ed4c5ee0733a44869fda0fbae59e5, type: 3}
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
@@ -134,31 +133,11 @@ MonoBehaviour:
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
   - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
-  - {fileID: 2535445447666359138, guid: f181c8e50e906e04c9fece33e5c9e61b, type: 3}
---- !u!54 &6278359374089611348
+  xMin: 0
+  xMax: 0
+  zMin: 0
+  zMax: 0
+--- !u!54 &-1789953346914407933
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
