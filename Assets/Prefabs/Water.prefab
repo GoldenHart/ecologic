@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3223269420695153183}
   - component: {fileID: 1525090016926010734}
+  - component: {fileID: 4123654804852773872}
+  - component: {fileID: 199484876349622405}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -43,6 +45,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4123654804852773872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827539556874557545}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &199484876349622405
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827539556874557545}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &941232129989093630
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,9 +84,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4409662593784869041}
   - component: {fileID: 8345011598069977482}
+  - component: {fileID: 3511216859932969894}
+  - component: {fileID: 8314421982459639281}
   m_Layer: 0
-  m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -86,6 +119,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3511216859932969894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941232129989093630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8314421982459639281
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941232129989093630}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1176216320658260936
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +165,7 @@ GameObject:
   - component: {fileID: 5587185494969505212}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -117,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 1176216320658260936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 0.5, z: 10}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children:
   - {fileID: 3223269420695153183}
   - {fileID: 5026336988139807886}
@@ -127,6 +189,7 @@ Transform:
   - {fileID: 7039353444440573566}
   - {fileID: 277703155664924375}
   - {fileID: 8897661047145837410}
+  - {fileID: 3392160671306787916}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -201,7 +264,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.89904606}
+  m_Size: {x: 1, y: 1.1, z: 0.89904606}
   m_Center: {x: 0, y: 0, z: -0.00877862}
 --- !u!54 &7033558092998872270
 Rigidbody:
@@ -243,9 +306,11 @@ GameObject:
   m_Component:
   - component: {fileID: 277703155664924375}
   - component: {fileID: 1327487607656151128}
+  - component: {fileID: 5153841858717045537}
+  - component: {fileID: 7879421245985368066}
   m_Layer: 0
-  m_Name: GameObject (6)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -276,6 +341,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5153841858717045537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736414556855499644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7879421245985368066
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736414556855499644}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4241210962321613479
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,9 +380,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7039353444440573566}
   - component: {fileID: 289875726044719954}
+  - component: {fileID: 2970146230881795342}
+  - component: {fileID: 6344331441987850947}
   m_Layer: 0
-  m_Name: GameObject (5)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -319,6 +415,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2970146230881795342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241210962321613479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6344331441987850947
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241210962321613479}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5248938447023924713
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,9 +454,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8897661047145837410}
   - component: {fileID: 7608949600244380847}
+  - component: {fileID: 6269416849080825789}
+  - component: {fileID: 3069250852099392828}
   m_Layer: 0
-  m_Name: GameObject (7)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -362,6 +489,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6269416849080825789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248938447023924713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3069250852099392828
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248938447023924713}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5811427396224747530
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,9 +528,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6980866453429005446}
   - component: {fileID: 9179625180693684425}
+  - component: {fileID: 4422486554418567358}
+  - component: {fileID: 3441611024844916048}
   m_Layer: 0
-  m_Name: GameObject (4)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -405,6 +563,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4422486554418567358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811427396224747530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3441611024844916048
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811427396224747530}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6299636192625022731
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,9 +602,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8085643866915527703}
   - component: {fileID: 5935996050046075453}
+  - component: {fileID: 4514254179027104341}
+  - component: {fileID: 6202409099120482919}
   m_Layer: 0
-  m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -448,6 +637,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4514254179027104341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299636192625022731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6202409099120482919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299636192625022731}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6648438429556061380
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,9 +676,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5026336988139807886}
   - component: {fileID: 7531867578733629672}
+  - component: {fileID: 8531657596038240483}
+  - component: {fileID: 2389861351876980315}
   m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_Name: Drinking Spots
+  m_TagString: Water
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -491,3 +711,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8007ccde3ed2855408dc81e24e2f8a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8531657596038240483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648438429556061380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2389861351876980315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648438429556061380}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &7786527841241262315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3392160671306787916}
+  - component: {fileID: 1912051729185705977}
+  m_Layer: 0
+  m_Name: Navmesh Obstacle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &3392160671306787916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786527841241262315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7266828673556485557}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1912051729185705977
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786527841241262315}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.45, y: 0.5, z: 0.45}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

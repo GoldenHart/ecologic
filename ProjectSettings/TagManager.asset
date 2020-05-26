@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Stable
   - Ground
+  - Species
+  - Food
+  - Water
   layers:
   - Default
   - TransparentFX

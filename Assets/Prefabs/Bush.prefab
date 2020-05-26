@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4882825350490618287}
   - component: {fileID: 4882825350490618280}
   - component: {fileID: 2172216694561404326}
+  - component: {fileID: -7369375693077336792}
   m_Layer: 0
   m_Name: Bush
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ef4c513674c254f86d9d2c65c5eaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-7369375693077336792
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882825350490618281}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
