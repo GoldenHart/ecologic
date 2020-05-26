@@ -424,6 +424,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 47f49079ae57d204a92478775f9461d8, type: 2}
+    - target: {fileID: 1912051729185705977, guid: cfdce45aefb19f2438a0a622528409c6,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5587185494969505212, guid: cfdce45aefb19f2438a0a622528409c6,
         type: 3}
       propertyPath: pond
