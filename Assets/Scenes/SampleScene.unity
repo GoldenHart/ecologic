@@ -527,6 +527,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090951662}
   m_CullTransparentMesh: 0
+--- !u!1 &1442471964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442471966}
+  - component: {fileID: 1442471965}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1442471965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442471964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64634f2355df4143926e652bbd0067b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1442471966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442471964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524089241
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 59.200012, y: -290}
+  m_AnchoredPosition: {x: 59.200012, y: -190.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1530635093
@@ -891,34 +934,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b6a27171462844b8431828bd41b35b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xNum: 100
-  zNum: 100
+  xNum: 30
+  zNum: 30
   objects:
-  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
-  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
-  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
-  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
+  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
   - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
   - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 3123172032134404834, guid: e005be5d0a92dfc47b0dbf9644281845, type: 3}
-  - {fileID: 3123172032134404834, guid: e005be5d0a92dfc47b0dbf9644281845, type: 3}
-  - {fileID: 3123172032134404834, guid: e005be5d0a92dfc47b0dbf9644281845, type: 3}
-  - {fileID: 3123172032134404834, guid: e005be5d0a92dfc47b0dbf9644281845, type: 3}
-  - {fileID: 3123172032134404834, guid: e005be5d0a92dfc47b0dbf9644281845, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
 --- !u!4 &2120931578
 Transform:
   m_ObjectHideFlags: 0

@@ -26,6 +26,10 @@ public class CarnivoreMovement : MonoBehaviour
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
+            if (gameObject.transform.position == home)
+            {
+                Destroy(gameObject);
+            }
         }
     }
     void FindClosestFood()

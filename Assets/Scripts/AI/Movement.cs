@@ -3,9 +3,10 @@ using UnityEngine.AI;
 
 public class Movement : MonoBehaviour
 {
-    bool isHungry = true;
+    bool isHungry = false;
     bool isThirsty = false;
     bool canIdle = false;
+
     Vector3 home;
 
     private void Start()
@@ -26,6 +27,10 @@ public class Movement : MonoBehaviour
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
+            if (gameObject.transform.position == home)
+            {
+                Destroy(gameObject);
+            }
         }
     }
     void FindClosestFood()
@@ -72,7 +77,6 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag(("Food")) && isHungry)
         {
             isHungry = false;
-            isThirsty = true;
         }
         if (collision.gameObject.CompareTag(("Carnivore")))
         {
@@ -85,7 +89,6 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
             isThirsty = false;
-            canIdle = true;
         }
     }
 }
