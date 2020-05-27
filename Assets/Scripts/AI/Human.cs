@@ -1,32 +1,27 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-public class Movement : MonoBehaviour
+public class Human : MonoBehaviour
 {
     // Variables
+    bool canBuild = true;
     bool isHungry = false;
     bool isThirsty = false;
     bool canIdle = false;
 
-    public GameObject homeTrigger;
-
+    int WoodCt = 0;
     Vector3 home;
+
+    public GameObject homeBuilding;
 
     // Home is where you started. Never forget it.
     private void Start()
     {
         home = gameObject.transform.position;
-        Instantiate(homeTrigger, home, Quaternion.identity);
     }
 
     // AI Logic (Boolean)
     private void Update()
     {
-        // Is food available?
-        Food[] allFood = GameObject.FindObjectsOfType<Food>();
-        if (allFood.Length == 0 && isHungry == true)
-        {
-            Destroy(gameObject);
-        }
         // Go to Food
         if (isHungry)
         {
@@ -42,11 +37,42 @@ public class Movement : MonoBehaviour
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
+            if(gameObject.transform.position == home && WoodCt <= 5)
+            {
+                canIdle = false;
+                canBuild = true;
+            }
+            if (gameObject.transform.position == home && WoodCt == 5)
+            {
+                Instantiate(homeBuilding, home, Quaternion.identity);
+                WoodCt = 0;
+            }
+
         }
-        if (Input.GetKeyDown(KeyCode.P))
+        else if (canBuild)
         {
-            isHungry = true;
+            FindClosestTree();
         }
+    }
+
+    private void FindClosestTree()
+    {
+        float distanceToClosestTree = Mathf.Infinity;
+        Tree closestTree = null;
+        Tree[] allTree = GameObject.FindObjectsOfType<Tree>();
+
+        foreach (Tree currentTree in allTree)
+        {
+            float distanceToTree = (currentTree.transform.position - this.transform.position).sqrMagnitude;
+            if (distanceToTree < distanceToClosestTree)
+            {
+                distanceToClosestTree = distanceToTree;
+                closestTree = currentTree;
+            }
+        }
+        // Find Tree
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = closestTree.transform.position;
     }
 
     // Find Food and Water Functions
@@ -99,10 +125,14 @@ public class Movement : MonoBehaviour
             isHungry = false;
             isThirsty = true;
         }
-        if (collision.gameObject.CompareTag(("Carnivore")))
+        if(collision.gameObject.CompareTag(("Tree")) && canBuild)
         {
-            Destroy(gameObject);
+            canBuild = false;
+            Destroy(collision.gameObject);
+            canIdle = true;
+            WoodCt++;
         }
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -111,12 +141,5 @@ public class Movement : MonoBehaviour
             isThirsty = false;
             canIdle = true;
         }
-        if (other.gameObject.CompareTag("UnitHome") && canIdle)
-        {
-            canIdle = false;
-            NavMeshAgent agent = GetComponent<NavMeshAgent>();
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        }
     }
 }
-

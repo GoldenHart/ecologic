@@ -429,6 +429,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2477244418822051839, guid: cfdce45aefb19f2438a0a622528409c6,
+        type: 3}
+      propertyPath: pond
+      value: 
+      objectReference: {fileID: 6386167226532017580}
     - target: {fileID: 5587185494969505212, guid: cfdce45aefb19f2438a0a622528409c6,
         type: 3}
       propertyPath: pond
@@ -442,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 7266828673556485557, guid: cfdce45aefb19f2438a0a622528409c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7266828673556485557, guid: cfdce45aefb19f2438a0a622528409c6,
         type: 3}
