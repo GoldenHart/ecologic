@@ -18,12 +18,6 @@ public class Movement : MonoBehaviour
     // AI Logic (Boolean)
     private void Update()
     {
-        // Is food available?
-        Food[] allFood = GameObject.FindObjectsOfType<Food>();
-        if(allFood.Length == 0 && isHungry == true)
-        {
-            Destroy(gameObject);
-        }
         // Go to Food
         if (isHungry)
         {

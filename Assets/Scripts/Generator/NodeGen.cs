@@ -9,7 +9,13 @@ public class NodeGen : MonoBehaviour
     {
         Plant();
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Plant();
+        }
+    }
     public void Plant()
     {
         SolveForPosition();

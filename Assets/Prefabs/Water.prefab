@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1488683861369437529}
   - component: {fileID: 610406491011576869}
   - component: {fileID: 7033558092998872270}
-  - component: {fileID: 5587185494969505212}
+  - component: {fileID: 2477244418822051839}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water
@@ -189,7 +189,6 @@ Transform:
   - {fileID: 7039353444440573566}
   - {fileID: 277703155664924375}
   - {fileID: 8897661047145837410}
-  - {fileID: 3392160671306787916}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,8 +250,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.81784385, y: 1, z: 1}
-  m_Center: {x: 0.0076811793, y: 0, z: 0}
+  m_Size: {x: 0.81784385, y: 0.7961254, z: 1}
+  m_Center: {x: 0.0076811793, y: 0.101937294, z: 0}
 --- !u!65 &610406491011576869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -264,8 +263,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1, z: 0.89904606}
-  m_Center: {x: 0, y: 0, z: -0.00877862}
+  m_Size: {x: 1, y: 0.8196732, z: 0.89904606}
+  m_Center: {x: 0, y: 0.14016342, z: -0.00877862}
 --- !u!54 &7033558092998872270
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -282,7 +281,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &5587185494969505212
+--- !u!114 &2477244418822051839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,50 +739,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!1 &7786527841241262315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3392160671306787916}
-  - component: {fileID: 1912051729185705977}
-  m_Layer: 0
-  m_Name: Navmesh Obstacle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
---- !u!4 &3392160671306787916
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7786527841241262315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7266828673556485557}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &1912051729185705977
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7786527841241262315}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.45, y: 0.5, z: 0.45}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5

@@ -317,7 +317,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.32156864, g: 0.38039216, b: 0.42745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -381,7 +381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1069649264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -920,12 +920,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b6a27171462844b8431828bd41b35b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xNum: 30
-  zNum: 30
+  xNum: 50
+  zNum: 50
   objects:
   - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
+  - {fileID: 3123172032134404834, guid: 4167861e22ece0249a583af811c07706, type: 3}
+  - {fileID: 3123172032134404834, guid: 411f8329a93e28743bb3e1b308366736, type: 3}
   - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
+  - {fileID: 3123172032134404834, guid: 7077b6eb32d7a514599cd28d2a1edc2e, type: 3}
+  - {fileID: 3123172032134404834, guid: f48a15c2743c83046a4211bd6a8eab88, type: 3}
+  underground:
+  - {fileID: 3123172032134404834, guid: 1467e1eb9a2acd249a589326c7a3bfc1, type: 3}
 --- !u!4 &2120931578
 Transform:
   m_ObjectHideFlags: 0
