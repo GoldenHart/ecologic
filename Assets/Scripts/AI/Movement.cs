@@ -3,26 +3,38 @@ using UnityEngine.AI;
 
 public class Movement : MonoBehaviour
 {
+    // Variables
     bool isHungry = false;
     bool isThirsty = false;
     bool canIdle = false;
-
     Vector3 home;
 
+    // Home is where you started. Never forget it.
     private void Start()
     {
         home = gameObject.transform.position;
     }
+
+    // AI Logic (Boolean)
     private void Update()
     {
+        // Is food available?
+        Food[] allFood = GameObject.FindObjectsOfType<Food>();
+        if(allFood.Length == 0 && isHungry == true)
+        {
+            Destroy(gameObject);
+        }
+        // Go to Food
         if (isHungry)
         {
             FindClosestFood();
         }
+        // Go to Water
         else if (isThirsty)
         {
             FindClosestWater();
         }
+        // Go home.
         else if (canIdle)
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -32,7 +44,14 @@ public class Movement : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            isHungry = true;
+        }
     }
+
+    // Find Food and Water Functions
+
     void FindClosestFood()
     {
         float distanceToClosestFood = Mathf.Infinity;
@@ -72,23 +91,26 @@ public class Movement : MonoBehaviour
         agent.destination = closestWater.transform.position;
     }
 
+    // Have I eaten?
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(("Food")) && isHungry)
         {
             isHungry = false;
+            isThirsty = true;
         }
         if (collision.gameObject.CompareTag(("Carnivore")))
         {
             Destroy(gameObject);
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
             isThirsty = false;
+            canIdle = true;
         }
     }
 }
