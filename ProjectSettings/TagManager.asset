@@ -12,6 +12,7 @@ TagManager:
   - Carnivore
   - Tree
   - UnitHome
+  - Spawner
   layers:
   - Default
   - TransparentFX

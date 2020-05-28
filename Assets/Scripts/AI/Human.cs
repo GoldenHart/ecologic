@@ -6,7 +6,6 @@ public class Human : MonoBehaviour
     bool canBuild = true;
     bool isHungry = false;
     bool isThirsty = false;
-    bool canIdle = false;
 
     int WoodCt = 0;
     Vector3 home;
@@ -28,31 +27,15 @@ public class Human : MonoBehaviour
             FindClosestFood();
         }
         // Go to Water
-        else if (isThirsty)
+        if (isThirsty)
         {
             FindClosestWater();
         }
-        // Go home.
-        else if (canIdle)
-        {
-            NavMeshAgent agent = GetComponent<NavMeshAgent>();
-            agent.destination = home;
-            if(gameObject.transform.position == home && WoodCt <= 5)
-            {
-                canIdle = false;
-                canBuild = true;
-            }
-            if (gameObject.transform.position == home && WoodCt == 5)
-            {
-                Instantiate(homeBuilding, home, Quaternion.identity);
-                WoodCt = 0;
-            }
-
-        }
-        else if (canBuild)
+        if (canBuild && WoodCt <= 5)
         {
             FindClosestTree();
         }
+
     }
 
     private void FindClosestTree()
@@ -127,10 +110,11 @@ public class Human : MonoBehaviour
         }
         if(collision.gameObject.CompareTag(("Tree")) && canBuild)
         {
-            canBuild = false;
             Destroy(collision.gameObject);
-            canIdle = true;
+            NavMeshAgent agent = GetComponent<NavMeshAgent>();
+            agent.destination = home;
             WoodCt++;
+            canBuild = false;
         }
 
     }
@@ -139,7 +123,20 @@ public class Human : MonoBehaviour
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
             isThirsty = false;
-            canIdle = true;
+            NavMeshAgent agent = GetComponent<NavMeshAgent>();
+            agent.destination = home;
         }
+
+        if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5)
+        {
+            canBuild = true;
+        }
+
+        if (other.gameObject.CompareTag("Spawner") && WoodCt == 5)
+        {
+            Instantiate(homeBuilding, home, Quaternion.identity);
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        }
+
     }
 }
