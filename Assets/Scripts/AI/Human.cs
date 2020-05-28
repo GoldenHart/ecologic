@@ -4,6 +4,7 @@ public class Human : MonoBehaviour
 {
     // Variables
     bool canBuild = true;
+    bool canStay = false;
     bool isHungry = false;
     bool isThirsty = false;
 
@@ -105,6 +106,7 @@ public class Human : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Food")) && isHungry)
         {
+            Destroy(collision.gameObject);
             isHungry = false;
             isThirsty = true;
         }
@@ -123,18 +125,26 @@ public class Human : MonoBehaviour
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
             isThirsty = false;
+            canStay = true;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
         }
 
-        if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5)
+        if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5 && WoodCt >= -1)
         {
             canBuild = true;
         }
 
         if (other.gameObject.CompareTag("Spawner") && WoodCt == 5)
         {
+            canBuild = false;
+            isHungry = true;
             Instantiate(homeBuilding, home, Quaternion.identity);
+            WoodCt = -1;
+            
+        }
+        if (other.gameObject.CompareTag("Spawner") && WoodCt == -1 && canStay)
+        {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
         }
 

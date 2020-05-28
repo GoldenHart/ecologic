@@ -96,6 +96,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Food")) && isHungry)
         {
+            Destroy(collision.gameObject);
             isHungry = false;
             isThirsty = true;
         }

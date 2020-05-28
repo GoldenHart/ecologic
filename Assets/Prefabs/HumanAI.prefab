@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7888782377710976086}
   m_Layer: 0
   m_Name: HumanAI
-  m_TagString: Untagged
+  m_TagString: Species
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 1
   m_AngularSpeed: 120
