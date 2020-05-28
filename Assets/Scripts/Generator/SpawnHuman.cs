@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnHuman : MonoBehaviour
 {
+    // Spawns Human at Runtime
     public GameObject human;
 
     private void Start()

@@ -2,10 +2,13 @@
 
 public class WaterCheck : MonoBehaviour
 {
+    // Variables
+    Vector3 thisPos;
     public int colNum;
     public GameObject pond;
-    Vector3 thisPos;
     bool canDestroy = false;
+    
+    // Checks the map generation to see if water should become a pond. 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Ground"))
@@ -20,6 +23,7 @@ public class WaterCheck : MonoBehaviour
         }
     }
 
+    // Destroys the ocean tile if a pond tile should be placed instead.
     private void Update()
     {
         if (canDestroy == true)

@@ -9,6 +9,7 @@ public class Human : MonoBehaviour
     bool isThirsty = false;
 
     int WoodCt = 0;
+    
     Vector3 home;
 
     public GameObject homeBuilding;
@@ -36,10 +37,10 @@ public class Human : MonoBehaviour
         {
             FindClosestTree();
         }
-
     }
 
-    private void FindClosestTree()
+    // Find Stuff Functions
+    void FindClosestTree()
     {
         float distanceToClosestTree = Mathf.Infinity;
         Tree closestTree = null;
@@ -58,9 +59,6 @@ public class Human : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestTree.transform.position;
     }
-
-    // Find Food and Water Functions
-
     void FindClosestFood()
     {
         float distanceToClosestFood = Mathf.Infinity;
@@ -100,8 +98,7 @@ public class Human : MonoBehaviour
         agent.destination = closestWater.transform.position;
     }
 
-    // Have I eaten?
-
+    // Is stuff being done?
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(("Food")) && isHungry)

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SpawnGen : MonoBehaviour
 {
+    // Variables
     public GameObject[] objects;
     public float xMin, xMax, zMin, zMax;
 
     void Start()
     {
+        // Spawns the herbivore...simple. Calls SolveForPosition to Determine Location of the Ground Being Spawned on.
         SolveForPosition();
         for (float x = xMin; x < xMax; x++)
         {
@@ -22,6 +24,7 @@ public class SpawnGen : MonoBehaviour
 
     void SolveForPosition()
     {
+        // Math to Determine Position. Pretty Straightforward.
         xMin = gameObject.transform.position.x;
         xMin = xMin -= 4.1f;
         xMax = gameObject.transform.position.x;
