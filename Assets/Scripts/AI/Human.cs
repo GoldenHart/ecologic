@@ -4,7 +4,7 @@ public class Human : MonoBehaviour
 {
     // Variables
     bool canBuild = true;
-    bool canStay = false;
+    // bool canStay = false;
     bool isHungry = false;
     bool isThirsty = false;
 
@@ -23,6 +23,7 @@ public class Human : MonoBehaviour
     // AI Logic (Boolean)
     private void Update()
     {
+        /*
         // Go to Food
         if (isHungry)
         {
@@ -37,6 +38,7 @@ public class Human : MonoBehaviour
         {
             FindClosestTree();
         }
+        */
     }
 
     // Find Stuff Functions
@@ -105,7 +107,6 @@ public class Human : MonoBehaviour
         {
             Destroy(collision.gameObject);
             isHungry = false;
-            isThirsty = true;
         }
         if(collision.gameObject.CompareTag(("Tree")) && canBuild)
         {
@@ -122,28 +123,21 @@ public class Human : MonoBehaviour
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
             isThirsty = false;
-            canStay = true;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
         }
 
         if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5 && WoodCt >= -1)
         {
-            canBuild = true;
+            // canBuild = true;
         }
 
         if (other.gameObject.CompareTag("Spawner") && WoodCt == 5)
         {
             canBuild = false;
-            isHungry = true;
             Instantiate(homeBuilding, home, Quaternion.identity);
             WoodCt = -1;
             
         }
-        if (other.gameObject.CompareTag("Spawner") && WoodCt == -1 && canStay)
-        {
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        }
-
     }
 }
