@@ -1,29 +1,61 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 public class Human : MonoBehaviour
 {
     // Variables
-    bool canBuild = true;
+    // bool canBuild = false;
     // bool canStay = false;
+    public int hunger, thirst;
     bool isHungry = false;
     bool isThirsty = false;
 
-    int WoodCt = 0;
+    // int WoodCt = 0;
     
     Vector3 home;
 
     public GameObject homeBuilding;
 
+    private IEnumerator coroutine;
+
     // Home is where you started. Never forget it.
     private void Start()
     {
+        hunger = 100;
+        thirst = 105;
+        
+        coroutine = DecreaseVitals(5.0f);
+        StartCoroutine(coroutine);
+        
         home = gameObject.transform.position;
     }
 
     // AI Logic (Boolean)
     private void Update()
-    {
-        /*
+    {  
+
+        #region Boolean Food and Water
+        // Hunger
+        if (hunger <= 99)
+        {
+            isHungry = true;
+        }
+        else if (hunger >= 99)
+        {
+            isHungry = false;
+        }
+
+        // Thirst
+        if (thirst <= 99)
+        {
+            isThirsty = true;
+        }
+        else if (thirst >= 99)
+        {
+            isThirsty = false;
+        }
+        #endregion
+        #region Eating Out
         // Go to Food
         if (isHungry)
         {
@@ -34,14 +66,17 @@ public class Human : MonoBehaviour
         {
             FindClosestWater();
         }
+        #endregion
+        
+        /*
         if (canBuild && WoodCt <= 5)
         {
             FindClosestTree();
         }
         */
     }
-
-    // Find Stuff Functions
+    #region Location Functions
+    /*
     void FindClosestTree()
     {
         float distanceToClosestTree = Mathf.Infinity;
@@ -61,6 +96,7 @@ public class Human : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestTree.transform.position;
     }
+    */
     void FindClosestFood()
     {
         float distanceToClosestFood = Mathf.Infinity;
@@ -99,15 +135,16 @@ public class Human : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestWater.transform.position;
     }
-
-    // Is stuff being done?
+    #endregion
+    #region Collisions FoodNTree
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(("Food")) && isHungry)
         {
             Destroy(collision.gameObject);
-            isHungry = false;
+            hunger = hunger += 25;
         }
+        /*
         if(collision.gameObject.CompareTag(("Tree")) && canBuild)
         {
             Destroy(collision.gameObject);
@@ -116,17 +153,21 @@ public class Human : MonoBehaviour
             WoodCt++;
             canBuild = false;
         }
-
+        */
     }
+    #endregion
+    
+    #region Triggers WaterNTree
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
-            isThirsty = false;
+            thirst = thirst += 25;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
+            print("I wont go home");
         }
-
+        /*
         if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5 && WoodCt >= -1)
         {
             // canBuild = true;
@@ -136,8 +177,21 @@ public class Human : MonoBehaviour
         {
             canBuild = false;
             Instantiate(homeBuilding, home, Quaternion.identity);
-            WoodCt = -1;
-            
+            WoodCt = -1;  
+        }
+        */
+    }
+    #endregion
+
+    private IEnumerator DecreaseVitals(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            hunger = hunger -= 5;
+            thirst = thirst -= 5;
         }
     }
+
+
 }

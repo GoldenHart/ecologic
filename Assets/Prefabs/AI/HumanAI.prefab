@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491d5991eb0ee08408e2ceb1cc367b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hunger: 0
+  thirst: 0
+  hungerLimit: 99
+  thirstLimit: 99
   homeBuilding: {fileID: 8803587740487465555, guid: 49380b7b6f6e1364997d69f5b56a6426,
     type: 3}
 --- !u!54 &8029960971700007499
