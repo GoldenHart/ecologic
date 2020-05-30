@@ -112,8 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunger: 0
   thirst: 0
-  hungerLimit: 99
-  thirstLimit: 99
+  hungerLimit: 20
+  thirstLimit: 20
   homeBuilding: {fileID: 8803587740487465555, guid: 49380b7b6f6e1364997d69f5b56a6426,
     type: 3}
 --- !u!54 &8029960971700007499
@@ -153,7 +153,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &7922330571493268792
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,15 @@ using System.Collections;
 public class Human : MonoBehaviour
 {
     // Variables
-    // bool canBuild = false;
-    // bool canStay = false;
-    public int hunger, thirst;
+    
+    public int hunger, thirst, hungerLimit, thirstLimit;
     bool isHungry = false;
     bool isThirsty = false;
+    bool canBuild = false;
+    bool isHouse = false;
+    bool hasTree = false;
 
-    // int WoodCt = 0;
+    int WoodCt = 0;
     
     Vector3 home;
 
@@ -34,26 +36,37 @@ public class Human : MonoBehaviour
     private void Update()
     {  
 
-        #region Boolean Food and Water
+        #region Boolean Food and Water and Buildability
         // Hunger
-        if (hunger <= 99)
+        if (hunger <= hungerLimit)
         {
             isHungry = true;
         }
-        else if (hunger >= 99)
+        else if (hunger >= hungerLimit)
         {
             isHungry = false;
         }
 
         // Thirst
-        if (thirst <= 99)
+        if (thirst <= thirstLimit)
         {
             isThirsty = true;
         }
-        else if (thirst >= 99)
+        else if (thirst >= thirstLimit)
         {
             isThirsty = false;
         }
+
+        // Can I build?
+        if (thirst >= thirstLimit && hunger >= hungerLimit && isHouse == false && hasTree == false)
+        {
+            canBuild = true;
+        }
+        else if (thirst <= thirstLimit && hunger <= hungerLimit || hasTree == true)
+        {
+            canBuild = false;
+        }
+
         #endregion
         #region Eating Out
         // Go to Food
@@ -68,15 +81,13 @@ public class Human : MonoBehaviour
         }
         #endregion
         
-        /*
         if (canBuild && WoodCt <= 5)
         {
             FindClosestTree();
         }
-        */
+
     }
     #region Location Functions
-    /*
     void FindClosestTree()
     {
         float distanceToClosestTree = Mathf.Infinity;
@@ -96,7 +107,6 @@ public class Human : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = closestTree.transform.position;
     }
-    */
     void FindClosestFood()
     {
         float distanceToClosestFood = Mathf.Infinity;
@@ -143,17 +153,17 @@ public class Human : MonoBehaviour
         {
             Destroy(collision.gameObject);
             hunger = hunger += 25;
+            NavMeshAgent agent = GetComponent<NavMeshAgent>();
+            agent.destination = home;
         }
-        /*
         if(collision.gameObject.CompareTag(("Tree")) && canBuild)
         {
             Destroy(collision.gameObject);
+            canBuild = false;
+            hasTree = true;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
-            WoodCt++;
-            canBuild = false;
         }
-        */
     }
     #endregion
     
@@ -165,21 +175,20 @@ public class Human : MonoBehaviour
             thirst = thirst += 25;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
-            print("I wont go home");
-        }
-        /*
-        if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5 && WoodCt >= -1)
-        {
-            // canBuild = true;
         }
 
+        if (other.gameObject.CompareTag("Spawner") && WoodCt <= 5 && WoodCt >= -1 && hasTree)
+        {
+            WoodCt++;
+            hasTree = false;
+        }
+        
         if (other.gameObject.CompareTag("Spawner") && WoodCt == 5)
         {
-            canBuild = false;
             Instantiate(homeBuilding, home, Quaternion.identity);
+            isHouse = true;
             WoodCt = -1;  
         }
-        */
     }
     #endregion
 
