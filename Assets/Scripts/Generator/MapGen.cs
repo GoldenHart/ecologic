@@ -19,11 +19,11 @@ public class MapGen : MonoBehaviour
             }
         }
         // Lower Layers
-        for (int x = 0; x < xNum; x += 10)
+        for (int x = -5; x < 50; x += 5)
         {
-            for (int y = -1; y > -10; y -= 1)
+            for (int y = -1; y > -2; y -= 1)
             {
-                for (int z = 0; z < zNum; z += 10)
+                for (int z = -5; z < 50; z += 5)
                 {
                     int rand = Random.Range(0, underground.Length);
                     Instantiate(underground[rand], new Vector3(x, y, z), Quaternion.identity);

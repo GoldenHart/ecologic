@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7160633427823535114}
   - component: {fileID: 4139757082898524003}
   - component: {fileID: 3468381387531410820}
+  - component: {fileID: 1015506800272268900}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -93,6 +94,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1015506800272268900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452249930147827647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba6e7244ef0677438fc2fcd23317101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassland: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
+    type: 3}
 --- !u!1 &5101175699471550976
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +120,7 @@ GameObject:
   - component: {fileID: 3675295874536149258}
   - component: {fileID: 1718119435556819237}
   - component: {fileID: 4000998031209731769}
+  - component: {fileID: 2808470955922955102}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -186,6 +202,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2808470955922955102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5101175699471550976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba6e7244ef0677438fc2fcd23317101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassland: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
+    type: 3}
 --- !u!1 &6386167226532017580
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +227,7 @@ GameObject:
   - component: {fileID: 8668582760644798732}
   m_Layer: 0
   m_Name: Pond
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,6 +263,7 @@ GameObject:
   - component: {fileID: 9200304702401987372}
   - component: {fileID: 8971854031544661122}
   - component: {fileID: 7035432116127486080}
+  - component: {fileID: 3471403746223479319}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -314,6 +345,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3471403746223479319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742634211693802387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba6e7244ef0677438fc2fcd23317101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassland: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
+    type: 3}
 --- !u!1 &7169067830034198307
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +371,7 @@ GameObject:
   - component: {fileID: 2264274931392676276}
   - component: {fileID: 2260337002832570606}
   - component: {fileID: 4827974288722441980}
+  - component: {fileID: 4532221798441255418}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -407,6 +453,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4532221798441255418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169067830034198307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba6e7244ef0677438fc2fcd23317101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassland: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
+    type: 3}
 --- !u!1001 &8447379131339020378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,7 +488,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 47f49079ae57d204a92478775f9461d8, type: 2}
+      objectReference: {fileID: 2100000, guid: e3cac2a6865bdf0478b2c57e2af8f6af, type: 2}
     - target: {fileID: 1912051729185705977, guid: cfdce45aefb19f2438a0a622528409c6,
         type: 3}
       propertyPath: m_Center.y

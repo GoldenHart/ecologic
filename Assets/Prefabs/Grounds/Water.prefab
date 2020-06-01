@@ -162,8 +162,7 @@ GameObject:
   - component: {fileID: 1488683861369437529}
   - component: {fileID: 610406491011576869}
   - component: {fileID: 7033558092998872270}
-  - component: {fileID: 2477244418822051839}
-  - component: {fileID: 8021171863592841325}
+  - component: {fileID: 3270692606121668418}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water
@@ -219,7 +218,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3cac2a6865bdf0478b2c57e2af8f6af, type: 2}
+  - {fileID: 2100000, guid: 47f49079ae57d204a92478775f9461d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -282,7 +281,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &2477244418822051839
+--- !u!114 &3270692606121668418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,27 +290,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176216320658260936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba6e7244ef0677438fc2fcd23317101, type: 3}
+  m_Script: {fileID: 11500000, guid: d3ac791df82fb764686b6d52df902aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colNum: 0
-  pond: {fileID: 6386167226532017580, guid: 554341a3fe097db43ae7ce0f4472685c, type: 3}
---- !u!208 &8021171863592841325
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176216320658260936}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
-  m_TimeToStationary: 0.5
+  grasslands: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
+    type: 3}
 --- !u!1 &2736414556855499644
 GameObject:
   m_ObjectHideFlags: 0
