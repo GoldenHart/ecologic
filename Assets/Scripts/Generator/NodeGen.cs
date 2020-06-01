@@ -12,14 +12,7 @@ public class NodeGen : MonoBehaviour
         // Initial Planting
         Plant();
     }
-    private void Update()
-    {
-        // If More Planting is Needed/Desired; Should Be Automated Later By a Check;
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Plant();
-        }
-    }
+
     public void Plant()
     {
         // Plants the plants...simple. Calls SolveForPosition to Determine Location of the Ground Being Spawned on.
