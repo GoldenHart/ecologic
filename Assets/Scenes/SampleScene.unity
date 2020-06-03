@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321685890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 1260749598}
@@ -926,8 +926,8 @@ MonoBehaviour:
   objects:
   - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
   - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
-  - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
+  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
+  - {fileID: 1176216320658260936, guid: cfdce45aefb19f2438a0a622528409c6, type: 3}
   - {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17, type: 3}
   - {fileID: 3123172032134404834, guid: f48a15c2743c83046a4211bd6a8eab88, type: 3}
   underground:

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 610406491011576869}
   - component: {fileID: 7033558092998872270}
   - component: {fileID: 3270692606121668418}
+  - component: {fileID: 731709084288133005}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water
@@ -295,6 +296,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grasslands: {fileID: 3123172032134404834, guid: 7a102d409a6af474ba834a2af9a06d17,
     type: 3}
+--- !u!208 &731709084288133005
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176216320658260936}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2736414556855499644
 GameObject:
   m_ObjectHideFlags: 0
