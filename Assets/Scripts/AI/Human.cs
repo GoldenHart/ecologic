@@ -168,7 +168,7 @@ public class Human : MonoBehaviour
     #endregion
     
     #region Triggers WaterNTree
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Water") && isThirsty)
         {
