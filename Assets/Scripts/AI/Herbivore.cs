@@ -3,9 +3,9 @@ using UnityEngine.AI;
 public class Herbivore: MonoBehaviour
 {
     // Variables
-    bool isHungry = false;
-    bool isThirsty = false;
-    bool canIdle = false;
+    public bool isHungry = false;
+    public bool isThirsty = false;
+    public bool canIdle = false;
 
     public GameObject homeTrigger;
 
@@ -21,7 +21,7 @@ public class Herbivore: MonoBehaviour
     // AI Logic (Boolean)
     private void Update()
     {
-        /*
+        
         // Go to Food
         if (isHungry)
         {
@@ -38,7 +38,6 @@ public class Herbivore: MonoBehaviour
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
         }
-        */
     }
 
     // Find Food and Water Functions
