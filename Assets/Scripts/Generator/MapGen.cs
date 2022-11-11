@@ -6,6 +6,7 @@ public class MapGen : MonoBehaviour
 
     public GameObject[] objects;
     public GameObject[] underground;
+
     void Start()
     {   
         // Top Level Requires Different Generation Code than Lower Layers
@@ -31,6 +32,5 @@ public class MapGen : MonoBehaviour
             }
             
         }
-        Destroy(gameObject);
     }
 }

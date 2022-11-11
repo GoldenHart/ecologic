@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 public class Herbivore: MonoBehaviour
 {
     // Variables
+    public int hunger, thirst, hungerLimit, thirstLimit;
     public bool isHungry = false;
     public bool isThirsty = false;
     public bool canIdle = false;
@@ -11,9 +13,17 @@ public class Herbivore: MonoBehaviour
 
     Vector3 home;
 
+    private IEnumerator coroutine;
+
     // Home is where you started. Never forget it.
     private void Start()
     {
+        hunger = 100;
+        thirst = 105;
+        
+        coroutine = DecreaseVitals(5.0f);
+        StartCoroutine(coroutine);
+
         home = gameObject.transform.position;
         Instantiate(homeTrigger, home, Quaternion.identity);
     }
@@ -21,7 +31,7 @@ public class Herbivore: MonoBehaviour
     // AI Logic (Boolean)
     private void Update()
     {
-        
+        ShouldIRun();
         // Go to Food
         if (isHungry)
         {
@@ -37,6 +47,26 @@ public class Herbivore: MonoBehaviour
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             agent.destination = home;
+        }
+    }
+
+    // Should the Herbivore Run for its life?
+
+    void ShouldIRun()
+    {
+        // Not sure what this is, but it keeps throwing warnings and I don't feel like dealing with this right now.
+        // float distanceToClosestEnemy = Mathf.Infinity;
+        // Carnivore closestEnemy = null;
+        Carnivore[] allEnemies = GameObject.FindObjectsOfType<Carnivore>();
+
+        foreach (Carnivore currentEnemy in allEnemies)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
+            if (distanceToEnemy < 5)
+            {
+                Debug.Log("Sned halps!");
+                // IDK how to make him run yet.
+            }
         }
     }
 
@@ -108,6 +138,16 @@ public class Herbivore: MonoBehaviour
             canIdle = false;
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        }
+    }
+
+    private IEnumerator DecreaseVitals(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            hunger = hunger -= 5;
+            thirst = thirst -= 5;
         }
     }
 }

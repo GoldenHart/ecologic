@@ -6,6 +6,7 @@ public class Human : MonoBehaviour
     // Variables
     
     public int hunger, thirst, hungerLimit, thirstLimit;
+    public float IDnumber;
     bool isHungry = false;
     bool isThirsty = false;
     bool canBuild = false;
@@ -13,7 +14,7 @@ public class Human : MonoBehaviour
     bool hasTree = false;
 
     int WoodCt = 0;
-    
+     
     Vector3 home;
 
     public GameObject homeBuilding;
@@ -30,13 +31,16 @@ public class Human : MonoBehaviour
         StartCoroutine(coroutine);
         
         home = gameObject.transform.position;
+
+        float ID = Random.Range(10000, 99999);
+        IDnumber = ID;
+        print(gameObject.name + IDnumber);
     }
 
     // AI Logic (Boolean)
     private void Update()
     {  
-
-        #region Boolean Food and Water and Buildability
+#region Boolean Food and Water and Buildability
         // Hunger
         if (hunger <= hungerLimit)
         {
@@ -201,6 +205,4 @@ public class Human : MonoBehaviour
             thirst = thirst -= 5;
         }
     }
-
-
 }
